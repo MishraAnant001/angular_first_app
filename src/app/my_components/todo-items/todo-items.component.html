@@ -1,0 +1,11 @@
+<div class="card text-start w-50">
+    <div class="card-body">
+        <h4 class="card-title" [class.strike]="todo?.active" [class.nostrike]="!todo?.active">{{todo?.title}}</h4>
+        <p class="card-text">{{todo?.desc}}</p>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1" (click)="onCheckboxClick(todo)" [checked]=" !todo?.active">
+            <label class="form-check-label" for="exampleCheck1">mark as done</label>
+        </div>
+        <button class="btn btn-danger" (click)="onclick(todo)">delete</button>
+    </div>
+</div>
